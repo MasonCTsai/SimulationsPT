@@ -5,6 +5,7 @@
 package frc.robot;
 
 import frc.robot.subsystems.ExampleSubsystem;
+import frc.robot.subsystems.Reportable.LOG_LEVEL;
 import edu.wpi.first.wpilibj2.command.Command;
 
 public class RobotContainer {
@@ -12,6 +13,7 @@ public class RobotContainer {
 
   public RobotContainer() {
     configureBindings();
+    m_exampleSubsystem.initShuffleboard(LOG_LEVEL.OFF);
   }
 
   private void configureBindings() {
